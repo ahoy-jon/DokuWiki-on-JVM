@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   
+   <groupId>fr.winandy.jonathan</groupId>
+   <artifactId>helloworld-quercus</artifactId>
+   <packaging>war</packaging>
+   <version>1.0-SNAPSHOT</version>
+   <name>HelloWorld Quercus</name>
+
+   <properties>
+      <jetty-maven-plugin.version>7.2.2.v20101205</jetty-maven-plugin.version>
+   </properties>
+
+   <dependencies>
+      <dependency>
+        <groupId>Quercus</groupId>
+        <artifactId>quercus</artifactId>
+        <version>cc-4.0.14.2-dev</version>
+      </dependency>
+      
+      <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.14</version>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>${jetty-maven-plugin.version}</version>
+         </plugin>
+      </plugins>
+   </build>
+</project>
